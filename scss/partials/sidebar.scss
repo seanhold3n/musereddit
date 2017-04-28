@@ -13,12 +13,36 @@
   }
 
   .md a {
+    color: $fontColor;
     border-bottom: 0;
   }
 
   // Ad containers
   .dfp-ad-container {
     margin-bottom: 5px;
+  }
+
+  // Online users, subscribed users text
+  .subscribers, .users-online {
+    display: inline-block;
+    width: 100%;
+
+    .word {
+      font-size: 0;
+
+      &:after {
+        display: inline-block;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .subscribers .word:after {
+    content: 'people scream ';
+  }
+
+  .users-online .word:after {
+    content: 'endlessly waiting for the new EP'
   }
 }
 
@@ -88,6 +112,7 @@
     em {
       font-style: normal;
       flex: 1 20%;
+      text-align: center;
     }
 
     strong {
